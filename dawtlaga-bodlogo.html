@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let body = document.querySelector("body");
+      let img = document.createElement("img");
+      let button = document.createElement("button");
+      img.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+
+      body.appendChild(img);
+      body.appendChild(button);
+
+      let isOn = false;
+      button.innerText = isOn ? "Off" : "On";
+
+      button.addEventListener("click", () => {
+        isOn = !isOn;
+        button.innerText = isOn ? "Off" : "On";
+        isOn
+          ? (img.src = "https://www.w3schools.com/js/pic_bulbon.gif")
+          : (img.src = "https://www.w3schools.com/js/pic_bulboff.gif");
+      });
+    </script>
+  </body>
+</html>

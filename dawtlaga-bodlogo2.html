@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="dawtlaga-bodlo2.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box"></div>
+    <button>change the fucking color</button>
+
+    <script>
+      let colorArray = [
+        "#FF6633",
+        "#FFB399",
+        "#FF33FF",
+        "#FFFF99",
+        "#00B3E6",
+        "#E6B333",
+        "#3366E6",
+        "#999966",
+        "#99FF99",
+        "#B34D4D",
+      ];
+
+      let button = document.querySelector("button");
+      let box = document.querySelector(".box");
+      let count = 0;
+      button.addEventListener("click", () => {
+        box.style.backgroundColor = colorArray[count];
+        count++;
+        if (count > colorArray.length) {
+          count = 0;
+        }
+      });
+    </script>
+  </body>
+</html>
